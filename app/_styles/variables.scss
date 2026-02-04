@@ -1,24 +1,37 @@
 // COLORS
-$black: #1c232b;
-$grey: #6c7289;
-$cream: #f2eae2;
-$white: #ffffff;
-$green500: #3d8168;
-$green700: #1a4032;
+$black: #000000;
+$neutral100: #f5f5f5;
+$neutral50: #fafafa;
+$neutral0: #ffffff;
+$slate800: #33323d;
+$slate400: #9a99ab;
+$slate300: #d8d6d7;
+$indigo600: #4f63d8;
+$indigo500: #5267e0;
+$blue950: #203a4c;
+$teal400: #5fb4a2;
+$sky400: #41b4d3;
+$linen50: #ffefec;
+$red500: #f43030;
 
 // FONTS
-$fraunces: "Fraunces", serif;
-$montserrat: "Montserrat", sans-serif;
+$ibarra: "Ibarra Real Nova", serif;
+$publicSans: "Public Sans", sans-serif;
 
 // SPACING
-$spacing-xl: 4rem;
-$spacing-lg: 3.2rem;
-$spacing-med: 2.4rem;
-$spacing-sm: 1.6rem;
-$spacing-xs: 0.8rem;
-$spacing-xxs: 0.4rem;
+$spacing-100: 0.8rem;
+$spacing-150: 1.2rem;
+$spacing-200: 1.6rem;
+$spacing-300: 2.4rem;
+$spacing-375: 3rem;
+$spacing-400: 3.2rem;
+$spacing-500: 4rem;
+$spacing-600: 4.8rem;
+$spacing-700: 5.6rem;
+$spacing-1000: 8rem;
 
 // RESPONSIVE BREAKPOINTS
+$bp-tablet: 48em; // 768px
 $bp-mobile: 23.4375em; // 375px
 
 // MIXINS
@@ -37,22 +50,56 @@ $bp-mobile: 23.4375em; // 375px
 }
 
 @mixin textPreset1($color) {
-  font-family: $fraunces;
-  @include textPreset(700, 3.2rem, _, _, $color);
+  @include textPreset(
+    $fontSize: 5rem,
+    $letterSpacing: -0.45px,
+    $fontWeight: 700
+  );
 }
 
 @mixin textPreset2($color) {
-  @include textPreset(700, 1.4rem, 110%, _, $color);
+  @include textPreset(
+    $fontSize: 4rem,
+    $lineHeight: 105%,
+    $letterSpacing: -0.35px,
+    $fontWeight: 700
+  );
 }
 
 @mixin textPreset3($color) {
-  @include textPreset(500, 1.4rem, 160%, _, $color);
+  @include textPreset(
+    $fontSize: 3.2rem,
+    $lineHeight: 130%,
+    $letterSpacing: -0.3px,
+    $fontWeight: 400
+  );
 }
 
 @mixin textPreset4($color) {
-  @include textPreset(500, 1.2rem, 120%, 0.05rem, $color);
+  @include textPreset($fontSize: 1.6rem, $lineHeight: 187.5%, $fontWeight: 400);
 }
 
 @mixin textPreset5($color) {
-  @include textPreset(500, 1.3rem, 120%, _, $color);
+  @include textPreset($fontSize: 1.5rem, $lineHeight: 200%, $fontWeight: 400);
+}
+
+@mixin textPreset6Bold($color) {
+  @include textPreset($fontSize: 1.3rem, $lineHeight: 230%, $fontWeight: 700);
+}
+
+@mixin textPreset6Regular($color) {
+  @include textPreset($fontSize: 1.3rem, $lineHeight: 230%, $fontWeight: 400);
+}
+
+@mixin textPreset7($color) {
+  @include textPreset(
+    $fontSize: 1.2rem,
+    $lineHeight: 115%,
+    $letterSpacing: 2px,
+    $fontWeight: 400
+  );
+}
+
+@mixin textPreset8($color) {
+  @include textPreset($fontSize: 1rem, $lineHeight: 120%, $fontWeight: 400);
 }
