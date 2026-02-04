@@ -1,17 +1,17 @@
-import { Fraunces, Montserrat } from "next/font/google";
+import { Ibarra_Real_Nova, Public_Sans } from "next/font/google";
 import "@/app/_styles/globals.scss";
 import Attribution from "@/app/_components/attribution/Attribution";
 
-const fraunces = Fraunces({
+const ibarra = Ibarra_Real_Nova({
   weight: ["700"]
 });
 
-const montserrat = Montserrat({
+const publicSans = Public_Sans({
   weight: ["500", "700"]
 });
 
 export const metadata = {
-  title: "Frontend Mentor | Product Preview Card Component",
+  title: "Frontend Mentor | Minimalist Portfolio Website",
   description: "A frontendmentor.io challenge"
 };
 
@@ -21,10 +21,10 @@ export default function RootLayout({ children }) {
       <head>
         <link
           rel="icon"
-          href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛍️</text></svg>"
+          href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💼</text></svg>"
         />
       </head>
-      <body className={`${(fraunces.variable, montserrat.variable)}`}>
+      <body className={`${(ibarra.variable, publicSans.variable)}`}>
         <main>{children}</main>
         <footer>
           <Attribution />
