@@ -7,7 +7,7 @@ const ibarra = Ibarra_Real_Nova({
 });
 
 const publicSans = Public_Sans({
-  weight: ["500", "700"]
+  weight: ["400", "700"]
 });
 
 export const metadata = {
